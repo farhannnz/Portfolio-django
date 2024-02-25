@@ -1,0 +1,20 @@
+{
+  "files": {
+    "django_project/settings.py": [
+      {
+        "id": "f3b55300-c3a1-4cbd-9b41-650faa94bc8e",
+        "line": 30,
+        "version": 117,
+        "index": 902
+      }
+    ],
+    "polls/views.py": [
+      {
+        "id": "3737e03f-47c4-4520-9a1c-955a5f1df742",
+        "line": 1,
+        "version": 1645,
+        "index": 0
+      }
+    ]
+  }
+}

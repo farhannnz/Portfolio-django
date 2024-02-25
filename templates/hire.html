@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+       html {
+      height: 100%;
+      width: 100%;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+    }
+
+    .container-main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .container-1{
+
+      background-color: white;
+      display: flex;
+      width: 450px;
+      height: 450px;
+      border: 2px solid orange;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+
+    }
+    .container-2{
+      background-color: white;
+      width: 450px;
+      height: 450px;
+      border: 2px solid Orange;
+      background-image: url("Picsart_24-02-06_22-12-16-057.jpg");
+      background-size: cover;
+    }
+
+    .button-box{
+      height: 50px;
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button-box button {
+       border: 2px solid red;
+       background-color: Red;
+      border-radius:20px;
+      width: 90px;
+
+    }
+    .button-box button a {
+      text-decoration:none;
+      color: white;
+    }
+    .container-1 h1{
+      width:100%;
+    }
+    .container-1 a{
+      text-decoration: none;
+      color: black;
+    }
+    span {
+      color:red;
+    }
+
+
+    @media (max-width: 768px) {
+      /* Add your mobile styles here */
+      .container-1{
+        height: 650px;
+      }
+
+      .container-2 {
+        display: none;
+      }
+    }
+    .download-button {
+      border: 2px solid red;
+      background-color: Red;
+      border-radius:20px;
+      width: 150 px;
+      color: white;
+    }
+    .container-1 form input {
+      border: 2px solid red;
+      border-radius:20px;
+
+  </style>
+
+</head>
+
+<body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+  <script src="script.js"></script>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">FARHAN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="#">Services</a>
+        <a class="nav-link" href="/hire">Contact</a>
+        <a class="nav-link disabled" aria-disabled="true">@farhannn.z</a>
+      </div>
+    </div>
+  </div>
+  </nav>
+{% if messages %}
+  {% for messages in messages %}
+  <h2>{{message}}</h2>
+  {% endfor %}
+  {% endif %}
+   <main>
+   <div class="container-main">
+     <div class="container-1">
+       <div><h1>Hey! I am <span>Farhan Khan</span></h1>
+       <h1>Fill up This To <span id="element">Hire me</span></h1></div>
+       <div>
+         
+         <form method="post" action="/hire">
+           {% csrf_token %}
+          <input placeholder="Email" name="mail" style="margin-bottom: 15px;" type="text" />
+          <input name="desc" placeholder="Describe Your Query" style="height:100px;" type="text"/>
+           <br />
+          <button style="margin-top: 15px; border: 2px solid red;
+  background-color: Red;
+  border-radius:20px;
+  width: 150 px;
+  color: white; ">Submit</button> 
+         </form>
+         
+      </div>
+       <div class="button-box">
+      <button> <a href="https://www.linkedin.com/in/farhan-khan-8b030a282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></button>  
+      <button> <a href="/resume">Resume</a></button>
+      <button> <a href="/">Home</a></button>   
+       </div>
+
+     </div>
+     <div class="container-2">
+       </div>
+
+   </div>
+ </main>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>Hire</i>', ' Contact','hire','contact','hire'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+
+</html>
