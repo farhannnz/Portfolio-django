@@ -8,7 +8,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "polls/wsgi.py"
+      "dest": "django_project/wsgi.py"
     }
   ]
 }
